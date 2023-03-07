@@ -29,7 +29,8 @@ sudo apt install -y \
     xdotool `# dependency of the ulauncher emoji plugin` \
     zsh \
     alacritty `# nice terminal emulator` \
-    diff-so-fancy `# tool for nicer diffs in git, used in .gitconfig`
+    diff-so-fancy `# tool for nicer diffs in git, used in .gitconfig` \
+    spotify-client
 
 # Install oh-my-zsh
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
