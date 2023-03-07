@@ -1,0 +1,12 @@
+#!/bin/bash
+set -e
+
+# Remove dock
+gnome-extensions disable ubuntu-dock@ubuntu.com
+
+# Set alacritty as default terminal
+sudo update-alternatives --install /usr/bin/x-terminal-emulator x-terminal-emulator /usr/bin/alacritty 50
+gsettings set org.gnome.desktop.default-applications.terminal exec alacritty
+
+# Install caffeine
+open https://extensions.gnome.org/extension/517/caffeine/

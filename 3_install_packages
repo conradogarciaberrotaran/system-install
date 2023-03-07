@@ -1,0 +1,50 @@
+#!/bin/bash
+set -e
+
+sudo apt install -y \
+    git \
+    git-core \
+    git-doc \
+    gitg \
+    tig \
+    vim \
+    neovim \
+    gparted \
+    htop \
+    ubuntu-restricted-extras \
+    build-essential \
+    tree \
+    python3-pip \
+    python3-dev \
+    python3-venv \
+    run-one \
+    nocache \
+    gnome-session \
+    gnome-tweaks \
+    nfs-common \
+    chrome-gnome-shell \
+    ulauncher `# nifty little launcher app` \
+    units `# unit converter, also used by the units ulauncher plugin` \
+    rofi `# dependency of the ulauncher emoji plugin` \
+    xdotool `# dependency of the ulauncher emoji plugin` \
+    zsh \
+    alacritty `# nice terminal emulator` \
+    diff-so-fancy `# tool for nicer diffs in git, used in .gitconfig`
+
+# Install oh-my-zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+chsh -s $(which zsh)
+
+# Install pyenv
+curl https://pyenv.run | bash
+
+echo 'export PYENV_ROOT="$HOME/.pyenv"
+command -v pyenv >/dev/null || export PATH="$PYENV_ROOT/bin:$PATH"
+eval "$(pyenv init -)"' >> ~/.zshrc
+
+# Install latest neovim
+curl -LO https://github.com/neovim/neovim/releases/latest/download/nvim.appimage
+chmod u+x nvim.appimage
+./nvim.appimage --appimage-extract
+sudo mv squashfs-root /
+sudo ln -s /squashfs-root/AppRun /usr/bin/nvim

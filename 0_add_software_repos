@@ -1,0 +1,14 @@
+#!/bin/bash
+set -e
+sudo add-apt-repository universe -n -y
+sudo apt update
+sudo apt install curl -y
+
+echo "Ulauncher app launcher"
+sudo add-apt-repository ppa:agornostal/ulauncher -n -y
+
+echo "Alacritty for Ubuntu"
+sudo add-apt-repository ppa:aslatter/ppa -y
+
+echo "Better diff tool used with git"
+sudo add-apt-repository ppa:aos1/diff-so-fancy -n -y
