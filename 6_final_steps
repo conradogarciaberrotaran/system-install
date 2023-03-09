@@ -1,0 +1,7 @@
+#!/bin/bash
+set -e
+
+echo "# Configure your git config#":
+echo "git config user.name 'Conrado Garcia Berrotaran'"
+echo "git config user.email 'example@mail.com'"
+echo "Remember to deactivate CAPS-LOCK in gnome-tweaks"
