@@ -22,6 +22,7 @@ sudo apt install -y \
     nocache \
     gnome-session \
     gnome-tweaks \
+    gnome-shell-extension-manager `# gnome extensions manager package` \
     nfs-common \
     chrome-gnome-shell \
     ulauncher `# nifty little launcher app` \
