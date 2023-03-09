@@ -2,6 +2,7 @@
 set -e
 
 sudo apt install -y \
+    silversearcher-ag \
     git \
     git-core \
     git-doc \
