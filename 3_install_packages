@@ -70,7 +70,6 @@ rm nvim.appimage
 
 # Install zoxide
 curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
-echo 'alias z=zoxide' >> ~/.zshrc 
-
+echo 'eval "$(zoxide init zsh)"' >> ~/.zshrc 
 # Add local bin to path
 echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.zshrc 
