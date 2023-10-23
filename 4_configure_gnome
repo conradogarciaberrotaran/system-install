@@ -1,6 +1,9 @@
 #!/bin/bash
 set -e
 
+# Remove capslock
+setxkbmap -option ctrl:nocaps
+
 # Remove dock
 gnome-extensions disable ubuntu-dock@ubuntu.com
 
