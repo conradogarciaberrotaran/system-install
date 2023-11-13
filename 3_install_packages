@@ -2,20 +2,16 @@
 set -e
 
 sudo apt install -y \
+    byoubu \
     silversearcher-ag \
     git \
-    git-core \
-    git-doc \
-    gitg \
     tig \
-    vim \
-    neovim \
     gparted \
     htop \
     ubuntu-restricted-extras \
     build-essential \
     tree \
-    zlib1g-dev \ 
+    zlib1g-dev \
     libffi-dev \
     libssl-dev \
     libbz2-dev \
@@ -40,7 +36,6 @@ sudo apt install -y \
     xdotool `# dependency of the ulauncher emoji plugin` \
     zsh \
     alacritty `# nice terminal emulator` \
-    diff-so-fancy `# tool for nicer diffs in git, used in .gitconfig` \
     spotify-client
 
 # Install oh-my-zsh
